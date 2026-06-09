@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 1 Month Anniversary ❤️</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playpen+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo" onclick="showTab('home')">
+        Happy
+        <br> Anniversary💚
+    </div>
+
+    <button class="tab-btn" onclick="showTab('first-day', this)">
+        📸 Our First Day
+    </button>
+
+    <button class="tab-btn" onclick="showTab('memories', this)">
+        🌷 Favorite Memories
+    </button>
+
+    <button class="tab-btn" onclick="showTab('letters', this)">
+        💌 Letters
+    </button>
+
+    <button class="tab-btn" onclick="showTab('jigsaw', this)">
+        🧩 Jigsaw Puzzle Game
+    </button>
+
+    <button class="tab-btn" onclick="showTab('maze', this)">
+        🏃 Maze Game
+    </button>
+
+    <button class="tab-btn" onclick="showTab('memory', this)">
+        🃏 Memory Match
+    </button>
+
+</div>
+
+<div class="content">
+    <div id="home" class="tab-content active">
+        <div class="card">
+            <img src="images/WePlay.png" class="memory-image" alt="First Selfie">
+            <h1>First Selfieeeee at Gunung Yahayuk !</h1>
+            <p>
+                Look at your pose, bery cuteeee HEHEHHEHEHEH
+                <br> I don't know why Indonesian map is our first map that we took selfie together :&lt;
+                <br> But I love that we had fun eventhough we fell many many times
+                <br> I remember I told you to ask for help from others but you refused!
+                <br> But it's otey, we reach the summit without anyone's help! Just us.
+                <br> THIS MAP IS EZ MUHASHAHHAHAHAH &gt;:D
+            </p>
+        </div>
+    </div>
+
+    <div id="first-day" class="tab-content">
+        <h1>Our First Day</h1>
+        <div class="card">
+            <img src="images/FirstText.png" alt="Our First Day" class="memory-image">
+            <p>
+                This was when you asked for my Discord. It's our very first message we sent to each other.
+                <br> I remember meeting you at Are you lonely map and I sang Popipo Pipo Popipo MEHEHEHEHHE
+                <br> It's a shame I didn't save any screenshots or videos :&lt;
+            </p>
+        </div>
+    </div>
+
+    <div id="memories" class="tab-content">
+        <h1>Favorite Memories</h1>
+        <div class="card">
+            <p> In the future, I'll keep this page to store our memories.
+                <br> I want to turn it into a photo album that we can open and read like a real photo book.
+                <br> But for now, I can't do that yet because we only have a few photos together.
+            </p>
+        </div>
+    </div>
+
+    <div id="letters" class="tab-content">
+        <h1>Letters</h1>
+        <div class="card">
+            <p> This is a letter for you that I wrote today (09/06/2026).
+                <br> Today, you had to wake up and go to work from 10 a.m. until 10 p.m. You must be very tired. And just like every day, you endure all that exhaustion so you can spend time with me afterward.
+                <br> We’ll probably play games together or watch a movie like we always do. But today is even more special because it’s our anniversary.
+                <br> I want to thank you for everything since the day we met. Thank you for not thinking I was weird or strange. Thank you for spending time with me and for giving us the chance to get to know each other.
+                <br> Thank you for every gift you've given me. Thank you for all the time you spend with me, even when you're exhausted from work. Thank you for comforting me whenever I cry or get emotional.
+                <br> Thank you for never being mean to me and for always being so patient with me.
+                <br> Honestly, I don't have much to say except thank you. And I love you so, so much.
+                <br> Thank you for telling me that I am the best thing that has ever happened in your life. You are the best thing that has ever happened in mine too.
+                <br> I sincerely wish the best for you. I hope you will always meet kind people and experience good things in life. No matter what problems come your way, I hope you can overcome them successfully.
+                <br> More than anything else, I hope you can find time to rest and take care of yourself. I admit that it gets very lonely when you're not around, but that's okay. I always understand you.
+                <br> You are doing your best for us, and I appreciate every bit of it.
+                <br> 
+                <br> Everything you do, every word you say, and simply your presence in my life mean so much to me.
+                <br>
+                <br> Happy Anniversary, Daniiii!!! ❤️
+                <br> I love you today, tomorrow, and every day after that ><
+            </p>
+        </div>
+    </div>
+
+    <div id="jigsaw" class="tab-content">
+        <h1>🧩 Jigsaw Puzzle Game</h1>
+        <div class="card">
+            <p> Rearrange the pieces to complete our picture! 💌 </p>
+            <button onclick="shufflePuzzle()" style="padding: 8px 15px; margin-bottom: 10px; cursor: pointer; border-radius: 8px; border: none; background: #225C2C; color: white;">
+                🔄 Shuffle
+            </button>
+            <div id="puzzle-board"></div>
+        </div>
+    </div>
+
+    <div id="maze" class="tab-content">
+        <h1>🏃 Maze Game</h1>
+        <div class="card">
+            <p> Reach the goal! 💚 </p>
+            <canvas id="mazeCanvas" width="500" height="500"></canvas>
+        </div>
+    </div>
+
+    <div id="memory" class="tab-content">
+        <h1>🃏 Memory Match</h1>
+        <div class="card">
+            <p> Find all matching pairs 💌 </p>
+            <div id="memory-board"></div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

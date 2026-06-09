@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    min-height:100vh;
+    font-family:'Playpen Sans', sans-serif;
+    background: linear-gradient(
+        -45deg,
+        #225C2C,
+        #3F7D4A,
+        #6FAF7C,
+        #B8D8B8
+    );
+    background-size:400% 400%;
+    animation:gradient 15s ease infinite;
+}
+
+@keyframes gradient{
+    0%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+    100%{ background-position:0% 50%; }
+}
+
+/* Sidebar */
+.sidebar{
+    width:260px;
+    background:#225C2C;
+    color:white;
+    padding:25px;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.15);
+    position:sticky;
+    top:0;
+    height:100vh;
+}
+
+.logo{
+    font-family:'Dancing Script', cursive;
+    font-size:48px;
+    text-align:center;
+    margin-bottom:60px;
+    cursor:pointer;
+    user-select:none;
+    transition:0.3s;
+}
+
+.logo:hover{
+    transform:scale(1.03);
+}
+
+.tab-btn{
+    width:100%;
+    color:white;
+    border:none;
+    background:none;
+    padding:14px;
+    margin-bottom:10px;
+    text-align:left;
+    font-size:16px;
+    cursor:pointer;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.tab-btn:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+/* แก้ไข: แยกการทำงานของ active ออกจากโลโก้เพื่อให้ปุ่มเมนูเท่านั้นที่เป็นแถบขาว */
+.tab-btn.active{
+    background:white;
+    color:#225C2C;
+    font-weight:bold;
+    border-radius: 10px;
+}
+
+/* Content */
+.content{
+    flex:1;
+    padding:40px;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.card{
+    background:white;
+    margin-top:20px;
+    padding:25px;
+    border-radius:20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.memory-image{
+    width:100%;
+    max-width:600px;
+    border-radius:15px;
+    display:block;
+    margin-bottom:20px;
+    transition:0.3s;
+}
+
+.memory-image:hover{
+    transform:scale(1.02);
+}
+
+h1{
+    color:#225C2C;
+}
+
+p{
+    line-height:1.8;
+}
+
+/* =====================
+   Puzzle Game
+===================== */
+#puzzle-board{
+    width:600px;
+    height:310px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows:repeat(3, 1fr);
+    gap:2px;
+    margin-top:20px;
+    overflow:hidden;
+    background-color: #eee;
+}
+
+.puzzle-piece{
+    width:100%;
+    height:100%;
+    border:1px solid #ddd;
+    cursor:pointer;
+    background-repeat:no-repeat;
+    background-size:600px 310px;
+    transition:0.2s ease;
+}
+
+.puzzle-piece:hover{
+    transform:scale(1.03);
+    z-index:1;
+}
+
+#jigsaw .card{
+    width:fit-content;
+}
+
+#memory-board{
+    display:grid;
+    grid-template-columns: repeat(4,100px);
+    gap:10px;
+    margin-top:20px;
+}
+
+.memory-card{
+    width:100px;
+    height:100px;
+    background:#225C2C;
+    color:white;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+    cursor:pointer;
+    transition:0.3s;
+    user-select: none;
+}
+
+.memory-card:hover{
+    transform:scale(1.05);
+}
+
+#mazeCanvas{
+    border:3px solid #225C2C;
+    margin-top:20px;
+    background:white;
+    display: block;
+}
